@@ -245,65 +245,76 @@ p{
 
 <body>
 
+
+<!-- BACKGROUND MUSIC -->
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
 <!-- PAGE 1 -->
 <div class="container active" id="screen-intro">
-    <h1>Hey Beautiful ✨</h1>
-    <p>I have something special to show you.</p>
-    <button class="btn" onclick="nextScreen('screen-letter')">Start Journey ❤️</button>
+    <h1>Hey AZAGII 😅🤭✨</h1>
+    <p> Ungaluku oru china suprisee😜😅🙈  .</p>
+    <button class="btn" onclick="nextScreen('screen-letter')"> Arambikalama 😽💖</button>
 </div>
 
 <!-- PAGE 2 -->
 <div class="container" id="screen-letter">
-    <h1>For You 💌</h1>
+    <h1>Love letter uh😂😂  💌</h1>
     <div class="letter-content">
         <span id="typewriter-text"></span><span class="cursor"></span>
     </div>
     <button class="btn" id="letter-next-btn" style="opacity:0;pointer-events:none" onclick="nextScreen('screen-proposal')">
-        One Last Thing...
+      ulaa vangoo😹🫶!!....
     </button>
 </div>
 
 <!-- PAGE 3 -->
 <div class="container" id="screen-proposal">
-    <h1>Will You Be My Valentine? 🌹</h1>
-    <p>You are my everything.</p>
+    <h1>Will You Be My Best friend forever Madam? 😳😉🌹</h1>
+    <p> Cutieeeeeee ga nenga 🥰🤭🙈🙈😂 </p>
     <div class="proposal-btns">
-        <button class="btn" onclick="acceptProposal()">YES 😍</button>
-        <button class="btn" id="noBtn" onmouseover="dodgeButton()">No 😢</button>
+        <button class="btn" onclick="acceptProposal()">YES Amukunga😍</button>
+        <button class="btn" id="noBtn" onmouseover="dodgeButton()">No venam plss😢</button>
     </div>
 </div>
 
 <!-- PAGE 4 -->
 <div class="container" id="screen-celebration">
-    <h1>I Knew It! 💖</h1>
+    <h1>Enku theriyumeeyyyy 🙈💞💖</h1>
     <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" style="width:60%;border-radius:10px;margin-bottom:20px;">
-    <p><b>I love you so much babyyyyyyy!</b> 🥰</p>
-    <button class="btn" onclick="nextScreen('page6')">ula vango ➜</button>
+    <p><b>Enthaanga en Heart ah vachikonga ungaluku thann💞🫀❤️💖💓💘 </b> 🥰</p>
+    <button class="btn" onclick="nextScreen('page6')"> Vangoo Mam 💌💝 ➜</button>
 </div>
 
 <!-- ================= PAGE 6 (YOUR CODE ADDED) ================= -->
 <div class="page" id="page6">
     <div class="page6-container">
-        <h1>Happy Valentine’s Day 💕</h1>
-        <div class="subtitle">To the one who owns my heart</div>
+        <h1>Happy Valentine’s Day Madam 💕</h1>
+        <div class="subtitle"> En nenjikula erukum kozanthaieeyy 😂😹🤭 </div>
         <div class="highlight">You & Me ❤️</div>
-        <div class="message">Forever isn’t long enough with you.</div>
-       <button class="btn" onclick="nextScreen('final-page')">
-    ula vango ➜
+        <div class="message"> Today,Tomorrow, and at the end of my life , 
+        YOU ARE ALWAYS MY 1st LOVE GAaaaa 🙈🙈💖😉💘 </div>
+      <button class="btn" onclick="goFinal()">
+   Kadaisiyaaa!!... ➜
 </button>
+
 
     </div>
 </div>
 
 <script>
-const loveLetterText=`Dearest Love,
+const loveLetterText=`Hi kozanthaii,
+ Enku entha perfect life lam vena ga! , just 
+  unga kudaa happy ah daily pesitu jolly ah eruntha pothum Mam  
+  as a good and best frnd ah .So, this is what i expect from you mam !!
+   Na ungala nala pathupan ga , like ungaluku pudichathu yelam theriji, ungala  kankalanga vidama pathupan 
+  and ungala sirika vachiteey erupan life full ah ..Na ungalukaga kandupudichathu 
+  ethann, enku therija way of expressing love and proposing you ga 
+  3X3=9 --> Will you be mine🙈🙈😳?
 
-From the moment I met you, my world changed.
-Your smile is my favorite sight,
-your laugh my favorite sound.
-
-I want forever with you...
-So I have one question ❤️`;
+   Seri, Last oru Question for you Madam ❤️`;
 
 let index=0;
 
@@ -448,7 +459,15 @@ const observer = new MutationObserver(()=>{
   }
 });
 observer.observe(document.body,{subtree:true,attributes:true});
+
+function goFinal(){
+    nextScreen('final-page');
+    music.play();
+}
+
+
 </script>
 
 </body>
+
 </html>
